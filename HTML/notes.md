@@ -10,3 +10,8 @@
 -> The name of an element inside a tag is case-insensitive. That is, it can be written in uppercase, lowercase, or a mixture.
 -> For example the <title> tag can be written as <Title>, <TITLE>, <TiTlE> or in any other way.
 -> However, the convention and recommended practice is to write tags in lowercase.
+
+# HTML ELEMENT:
+
+-> Opening tag + content + closing tag
+-> VOID ELEMENTS: Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist of a single tag, which is typically used to insert/embed something in the document. e.g. <img>
