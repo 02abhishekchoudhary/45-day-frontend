@@ -50,3 +50,9 @@
 
   </body>
 </html>
+
+# CSS
+
+-> There are three ways to include CSS: <link>, <style>, and the style attribute.
+-> <link> tag used for linking external css file
+-> <script> tag used for linking external js file.
