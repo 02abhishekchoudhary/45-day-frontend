@@ -56,3 +56,16 @@
 -> There are three ways to include CSS: <link>, <style>, and the style attribute.
 -> <link> tag used for linking external css file
 -> <script> tag used for linking external js file.
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Machine Learning Workshop</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  <script src="script.js"></script>
+  </body>
+</html>
