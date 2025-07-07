@@ -434,3 +434,84 @@ label {
 display: flex;
 flex-direction: column;
 }
+
+# Semantic HTML:
+
+-> With over 100 HTML elements, and the ability to create custom elements, there are infinite ways to mark up your content; but some ways—notably semantically—are better than others.
+-> Semantic means "relating to meaning". Writing semantic HTML means using HTML elements to structure your content based on each element's meaning, not its appearance.
+
+The first code snippet uses <div> and <span>, two elements with no semantic value.:
+
+<div>
+  <span>Three words</span>
+  <div>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+  </div>
+</div>
+<div>
+  <div>
+    <div>five words</div>
+  </div>
+  <div>
+    <div>three words</div>
+    <div>forty-six words</div>
+    <div>forty-four words</div>
+  </div>
+  <div>
+    <div>seven words</div>
+    <div>sixty-eight words</div>
+    <div>forty-four words</div>
+  </div>
+</div>
+<div>
+   <span>five words</span>
+</div>
+
+code with semantic elements:
+
+<header>
+  <h1>Three words</h1>
+  <nav>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+  </nav>
+</header>
+<main>
+  <header>
+    <h1>five words</h1>
+  </header>
+  <section>
+    <h2>three words</h2>
+    <p>forty-six words</p>
+    <p>forty-four words</p>
+  </section>
+  <section>
+    <h2>seven words</h2>
+    <p>sixty-eight words</p>
+    <p>forty-four words</p>
+  </section>
+</main>
+<footer>
+  <p>five words</p>
+</footer>
+
+# Accessibility object model (AOM):
+
+As the browser parses the content received, it builds the document object model (DOM) and the CSS object model (CSSOM). It then also builds an accessibility tree. Assistive devices, such as screen readers, use the AOM to parse and interpret content. The DOM is a tree of all the nodes in the document. The AOM is like a semantic version of the DOM.
+
+The role attribute:
+
+<div role="banner">
+  <span role="heading" aria-level="1">Three words</span>
+  <div role="navigation">
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+  </div>
+</div>
