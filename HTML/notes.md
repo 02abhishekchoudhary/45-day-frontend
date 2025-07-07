@@ -69,3 +69,178 @@
   <script src="script.js"></script>
   </body>
 </html>
+
+# Features of HTML5:
+
+1. Introduction to Audio and Video
+   <!DOCTYPE html>
+   <html lang="en">
+
+<head>
+    <title>
+        Example of Video and Audio Tags
+    </title>
+</head>
+
+<body>
+    <h2>Example of video and audio tag</h2>
+
+    <video width="300" height="200" controls autoplay>
+        <source src="/html5/foo.ogg" type="video/ogg" />
+        <source src="/html5/foo.mp4" type="video/mp4" />
+        Your browser does not support the video element.
+    </video>
+
+    <audio controls autoplay>
+        <source src="/html5/audio.ogg" type="audio/ogg" />
+        <source src="/html5/audio.wav" type="audio/wav" />
+        Your browser does not support the audio element.
+    </audio>
+
+</body>
+
+</html>
+
+2. Vector Graphics
+   <svg id="svgelem" height="200" 
+       xmlns="http://www.abc.org/2000/svg">
+   <circle id="redcircle" cx="50" cy="50" 
+           r="50" fill="red" />
+   </svg>
+
+3. Header and Footer
+   <!DOCTYPE html>
+   <html>
+
+<head>
+    <title>HTML Header</title>
+</head>
+
+<body>
+    <article>
+        <header>
+            <h1>This is the heading.</h1>
+            <h4>This is the sub-heading.</h4>
+            <p>This is the metadata.</p>
+        </header>
+    </article>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Footer</title>
+    <style>
+        a {
+            font-size: 25px;
+            text-decoration: none;
+        }
+
+        p {
+            font-size: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <footer>
+        <nav>
+            <p>
+                <a href=
+"https://www.geeksforgeeks.org/about/">About Us</a>|
+                <a href=
+"https://www.geeksforgeeks.org/privacy-policy/">Privacy Policy</a>|
+                <a href=
+"https://www.geeksforgeeks.org/careers/">Careers</a>
+            </p>
+        </nav>
+        <p>@geeksforgeeks, Some rights reserved</p>
+    </footer>
+</body>
+
+</html>
+
+4. Figure and Figcaption
+<figure>
+    <img src=
+"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png" 
+        alt="GFG" style="width:50%">
+    <figcaption>Fig.1 - Geeksforgeeks.</figcaption>
+</figure>
+
+5. HTML Nav Tag
+<h1> HTML Nav tag</h1>
+<nav>
+    <a href="/html/">HTML</a>
+    <a href="/css/">CSS</a>
+    <a href="/js/">JavaScript</a>
+    <a href="/jquery/">jQuery</a>
+</nav>
+
+6. HTML Progress Tag
+<h1>The progress element</h1>
+
+<label for="file">Downloading progress:</label>
+<progress id="file" value="32" max="100"> 32% </progress>
+
+7. Form Enhancements
+   <!DOCTYPE html>
+   <html>
+
+<body> 
+    <center> 
+        <h1 style="font-size:25px;font-style:italic;"> 
+            HTML FORM 
+        </h1> 
+        <h2 style="font-size:25px;font-style:italic;"> 
+        Placeholder Attribute in Input Element 
+        </h2> 
+        <form action=" "> 
+            <input type="text" name="fname" placeholder="First name"> 
+            <br> 
+            <input type="text" name="lname" placeholder="Last name"> 
+            <br> 
+            <input type="submit" value="Submit"> 
+        </form> 
+</center> 
+</body>
+
+</html>
+
+-> EMAIL ATTRIBUTE
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        HTML input type email
+    </title>
+</head>
+
+<body style="text-align:center;">
+
+    <h1 style="color:green;">
+        GeeksForGeeks
+    </h1>
+
+    <h2>HTML <input type="email"></h2>
+
+    <form>
+        Email: <input type="email"
+            value="manaschhabra499@gmailo.com">
+    </form>
+
+</body>
+
+</html>
+
+8. Web Storage
+
+9. Offline Web Applications
+
+10. WebSockets
