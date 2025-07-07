@@ -244,3 +244,193 @@
 9. Offline Web Applications
 
 10. WebSockets
+
+# Forms (Input types, attributes, validations)
+
+After submitting the form:
+
+<form method="GET">
+  <label for="student">Pick a student:</label>
+  <select name="student" id="student">
+    <option value="hoover">Hoover Sukhdeep</option>
+    <option>Blendan Smooth</option>
+    <option value="toasty">Toasty McToastface</option>
+  </select>
+  <input type="submit" value="Submit Form">
+</form>
+
+Radio buttons:
+
+<fieldset>
+  <legend>Who is your favorite student?</legend>
+  <ul>
+    <li>
+      <label>
+        <input type="radio" value="blendan" name="machine"> Blendan Smooth
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" value="hoover" name="machine"> Hoover Sukhdeep
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" value="toasty"  name="machine"> Toasty McToastface
+      </label>
+    </li>
+  </ul>
+</fieldset>
+
+CSS:
+/_ One radio button per line _/
+label {
+display: block;
+cursor: pointer;
+line-height: 2.5;
+}
+
+/_ the basic, unchecked style _/
+input[type="radio"] {
+appearance: none;
+display: inline-block;
+width: 2em;
+height: 2em;
+border-radius: 50%;
+border: 0.25em solid #000;
+}
+
+[type="radio"]:focus {
+background: lightgreen;
+border-color: white;
+box-shadow: 0 0 0 3px black;
+}
+/_ the checked style using the :checked pseudo class _/
+[type="radio"]:checked {
+background: blue;
+border-color: white;
+box-shadow: 0 0 0 3px black;
+}
+
+/_ never forget focus styling _/
+
+/_ Nothing to see here. _/
+body {
+margin: 3em auto;
+max-width: 30em;
+font-family: comic-sans;
+font-size: 1.5rem;
+font-family: sans-serif;
+}
+li {
+list-style-type: none;
+}
+
+fieldset {
+border: 2px solid #000;
+padding: 2em;
+border-radius: 0.5em;
+}
+
+legend {
+color: #fff;
+background: #000;
+padding: 0.25em 1em;
+border-radius: 1em;
+}
+
+Labels and fieldsets
+<label for="full_name">Your name</label>
+<input type="text" id="full_name" name="name">
+
+<fieldset>
+  <legend>Who is your favorite student?</legend>
+  <ul>
+    <li>
+      <label>
+        <input type="radio" value="blendan" name="machine"> Blendan Smooth
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" value="hoover" name="machine"> Hoover Sukhdeep
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" value="toasty" name="machine"> Toasty McToastface
+      </label>
+    </li>
+  </ul>
+</fieldset>
+
+Input types and dynamic keyboard:
+<input type="tel">
+<input type="email">
+
+Accessing the microphone and camera:
+<label for="avatar">A recent photo of yourself:</label>
+<input type="file" capture="user" accept="image/*" name="avatar" id="avatar">
+
+Built-in validation:
+There are some CSS selectors that match form controls based on the presence of HTML attributes including :required and :optional if the boolean required is set or not; :default if checked is hard-coded; and :enabled or :disabled, depending on whether the element is interactive and if the disabled attribute is present. The :read-write pseudoclass matches elements with contenteditable set and form controls that are by default editable, such as number, password, and text input types (but not checkbox, radio buttons, or the hidden type, among others). If a normally writable element has the readonly attribute set, it will match :read-only instead.
+
+As the user enters information into form controls, the CSS UI selectors, including :valid, :invalid, :in-range, and :out-of-range will toggle on and off depending on the state. When the user exits a form control, either the not-yet fully supported :user-invalid or :user-valid pseudo-class will match.
+
+You can use CSS to provide cues about whether form controls are required and valid as the user interacts with the form. You can even use CSS to prevent users from being able to click the submit button until the form is valid:
+
+form:invalid [type="submit"] {
+opacity: 50%;
+pointer-events: none;
+}
+
+<dialog open aria-labelledby="dialogid">
+  <form action="thankyou.php">
+    <button type="submit" aria-label="close" formmethod="dialog" formnovalidate>X</button>
+    <h2 id="dialogid">Application</h2>
+    <p>All fields are required</p>
+    <p>
+       <label>Name: 
+         <input type="text" name="name" required />
+      </label>
+    </p>
+    <p>
+      <label>Warranty: 
+        <input type="number" min="0" max="10" name="warranty" required />
+       </label>
+    </p>
+    <p>
+      <label>Power source:
+        <select name="powersoure">
+          <option>AC/DC</option>
+          <option>Battery</option>
+          <option>Solar</option>
+        </select>
+      </label>
+    </p>
+    <p>
+      <button type="submit" formmethod="post">Submit</button>
+    </p>
+  </form>
+</dialog>
+
+body {
+background:lightpink;
+font-family: sans-serif;
+}
+[aria-label="close"] {
+float: right;
+appearance: none;
+border-radius: 5rem;
+margin: -1em;
+}
+p {
+margin-top: 1em;
+}
+h2 + p {
+margin-top: -1em;
+}
+label {
+display: flex;
+flex-direction: column;
+}
