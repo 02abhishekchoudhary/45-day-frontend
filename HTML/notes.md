@@ -541,3 +541,64 @@ name
 Setting a page redirect
 
 <meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
+
+# Media tags : image, audio, video:
+
+<img src="images/eve.png" alt="Eve">
+<img src="images/eve.png" alt="Eve"
+  srcset="images/eve.png 400w, images/eve-xl.jpg 800w"
+  sizes="(max-width: 800px) 400px, 800px" />
+
+<picture>
+  <source src="images/eve.png" media="(max-width: 800px)" />
+  <source src="images/eve-xl.jpg" />
+  <img src="images/eve.png" alt="Eve" />
+</picture>
+
+If the image is of SVG file type, also include role="img", which is necessary due to VoiceOver bugs:
+<img src="switch.svg" alt="light switch" role="img" />
+
+Additional performance features:
+Lazy loading:
+The loading attribute tells the JS-enabled browser how to load the image. The default eager value means the image is loaded immediately as the HTML is parsed, even if the image is outside the visible viewport. By setting loading="lazy" the image loading is deferred until it is likely to come into the viewport. "Likely" is defined by the browser based on the distance the image is from the viewport. This is updated as the user scrolls. Lazy loading helps save bandwidth and CPU, improving performance for most users. If JavaScript is disabled, for security reasons, all images will default to eager.
+<img src="switch.svg" alt="light switch" loading="lazy" />
+
+Aspect ratio:
+<img src="switch.svg" alt="light switch" role="img" width="70" height="112" />
+
+# Audio and Video:
+
+The <video> and <audio> elements can be used to embed media players directly with the src attribute or can be used as the container element for a series of <source> elements, each providing a src file suggestion. While <video> can be used to embed an audio file, the <audio> element is preferable for embedding sound files.
+
+The opening <video> and <audio> tags can contain several other attributes including controls, autoplay, loop, mute, preload, and the global attributes. The <video> element also supports the height, width, and poster attributes.
+
+<video src="videos/machines.webm" poster="images/machine.jpg" controls>
+  <p>Watch <a href="https://youtube.com/link">video on Youtube</a></p>
+</video>
+
+<video controls poster="images/machine.jpg">
+  <source src="videos/machines.webm" type="video/webm">
+  <source src="videos/machines.mp4" type="video/mp4">
+  <source src="videos/machines.ogv" type="video/ogg">
+  <track label="English" kind="subtitles" srclang="en" src="vtt/subtitles-en.vtt" default />
+  <track label="Francais" kind="subtitles" srclang="fr" src="vtt/subtitles-fr.vtt" />
+  <p>Watch <a href="https://youtube.com/link">video on Youtube</a></p>
+</video>
+
+Tracks:
+
+<track label="English" kind="subtitles" srclang="en" src="vtt/subtitles-en.vtt" default />
+<track label="Français" kind="subtitles" srclang="fr" lang="fr-fr" src="vtt/subtitles-fr.vtt" />
+
+Background video considerations:
+<video playsinline autoplay loop muted poster="images/machine.jpg" role="none">
+
+  <source src="videos/machines.webm" type="video/webm">
+  <source src="videos/machines.mp4" type="video/mp4">
+  <source src="videos/machines.ogv" type="video/ogg">
+</video>
+
+Custom media controls:
+<button id="playPause" aria-controls="idOfAudio"
+  data-pause-text="Pause audio"
+  data-play-text="Play audio">Pause audio</button>
