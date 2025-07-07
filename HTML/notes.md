@@ -515,3 +515,29 @@ The role attribute:
     <a>one word</a>
   </div>
 </div>
+
+# Metatag:
+
+The <meta> HTML element represents metadata that cannot be represented by other meta-related elements, such as <base>, <link>, <script>, <style>, or <title>.
+
+The type of metadata provided by the <meta> element can be one of the following:
+
+If the name attribute is set, the <meta> element provides document-level metadata that applies to the whole page.
+If the http-equiv attribute is set, the <meta> element acts as a pragma directive to simulate directives that could otherwise be given by an HTTP header.
+If the charset attribute is set, the <meta> element is a charset declaration, giving the character encoding in which the document is encoded.
+If the itemprop attribute is set, the <meta> element provides user-defined metadata.
+
+Attributes:
+charset
+content
+http-equiv
+media
+name
+
+<meta
+  name="description"
+  content="The HTML reference describes all elements and attributes of HTML, including global attributes that apply to all elements." />
+
+Setting a page redirect
+
+<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
