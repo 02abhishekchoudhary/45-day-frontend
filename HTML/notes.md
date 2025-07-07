@@ -602,3 +602,58 @@ Custom media controls:
 <button id="playPause" aria-controls="idOfAudio"
   data-pause-text="Pause audio"
   data-play-text="Play audio">Pause audio</button>
+
+# SEO using HTML tags:
+
+1. Title Tags <title>
+2. Meta Descriptions <meta description>
+3. Header Tags <h1> to <h6>
+   Heading 1 <h1>: Main heading/title of the page
+   Heading 2 <h2>: Secondary heading
+   Heading 3 <h3>: Subheading of an <h2>
+   Heading 4 <h4>: Subheading of an <h3>
+   Heading 5 <h5>: Subheading of an <h4>
+   Heading 6 <h6>: Subheading of an <h5>
+4. Image Alt Text <img>
+5. Canonical Tags <canonical>
+<link rel="canonical" href="https://example.com/preferred-url-here/" />
+A canonical tag has several attributes:
+
+“link”: Defines the relationship between one URL and another
+rel="canonical": Indicates the type of relationship
+href="URL": Confirms the specific URL of the original content
+
+6. Robots Meta Tag <meta robots>
+
+A robots meta tag is a page-level tag that tells search engines and website crawlers how to crawl your site.
+
+Use the robots meta tag to specify whether a page should be indexed by search engines. And whether links on the page should be followed.
+
+Common pages where you might include this tag include:
+
+Admin or login pages
+Confirmation pages. Such as thank you pages.
+Internal search result pages
+Pages from your staging site
+Pages with duplicate content
+Pay-per-click (PPC) landing pages
+As an example, you might include the following code snippet in your HTML header if you don’t want search engines to index a page:
+
+<meta name="robots" content="noindex">
+The two attributes are “name” and “content.”
+
+Name: Indicates the type of metadata being defined (robots)
+Content: The instruction given (no index)
+You can also use multiple instructions within the content attribute. Such as noindex, nofollow, and noimageindex, among others. Use a comma to separate each one.
+
+Here’s an example of using multiple instructions:
+
+<meta name="robots" content="noindex, nofollow">
+The noindex directive tells search engines not to include the page in search results. The nofollow directive tells crawlers not to follow the links on the page.
+
+7. Schema Markup
+8. Table <table>
+9. Iframe <iframe>
+10. List Tag <li>
+11. Hyperlinks <a>
+12. Open Graph Tags and Twitter Cards
