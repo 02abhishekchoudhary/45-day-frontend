@@ -657,3 +657,19 @@ The noindex directive tells search engines not to include the page in search res
 10. List Tag <li>
 11. Hyperlinks <a>
 12. Open Graph Tags and Twitter Cards
+
+# IFrames:
+
+The <iframe> HTML element represents a nested browsing context, embedding another HTML page into the current one.
+
+<iframe
+  id="inlineFrameExample"
+  title="Inline Frame Example"
+  width="300"
+  height="200"
+  src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
+</iframe>
+iframe {
+  border: 1px solid black;
+  width: 100%; /* takes precedence over the width set with the HTML width attribute */
+}
