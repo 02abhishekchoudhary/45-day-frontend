@@ -1,5 +1,15 @@
 * {
   padding: 0;
   margin: 0;
+  /* box-sizing: border-box; */
+}
+
+p {
+  width: 100px;
+  /* width: max-content; */
+  /* height: 50px; */
+  padding: 20px;
+  border: 1px solid;
   box-sizing: border-box;
+
 }
