@@ -26,3 +26,33 @@ Position and order of appearance: the order of which your CSS rules appear
 Specificity: an algorithm which determines which CSS selector has the strongest match
 Origin: the order of when CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS
 Importance: some CSS rules are weighted more heavily than others, especially with the !important rule type
+
+# Specificity:
+
+Think of specificity as a hierarchy that determines which style declaration is ultimately applied to an element.
+
+-> A universal selector (\*) adds no specificity, leaving its value at the initial specificity of (0,0,0).
+
+-> An element (type) or pseudo-element selector adds element-like specificity which increments the C component by 1.
+
+The following examples have an overall specificity of (0,0,1).
+
+Type selector
+
+div {
+color: red;
+}
+Pseudo-element selector
+
+::selection {
+color: red;
+}
+
+-> ID selector
+An ID selector adds id-like specificity which increments the A component by 1, as long as you use an ID selector (#myID) and not an attribute selector ([id="myID"]).
+
+In the following example, the specificity is (1,0,0)
+
+#myID {
+color: red;
+}
