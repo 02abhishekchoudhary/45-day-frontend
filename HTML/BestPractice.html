@@ -2,7 +2,6 @@
 
 <!-- Start with DOCTYPE
 DOCTYPE is required for activating no-quirks mode. -->
-
 <!-- BAD -->
 <html>
 ...
@@ -17,19 +16,33 @@ DOCTYPE is required for activating no-quirks mode. -->
 
 <!-- Don’t use legacy or obsolete DOCTYPE
 DOCTYPE is not for DTD anymore, be simple. -->
-
 <!-- BAD -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <!-- GOOD -->
 <!DOCTYPE html>
 
+<!-- Don’t use XML Declaration
+Are you sure you want to write XHTML? -->
+<!-- BAD -->
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html>
+<!-- GOOD -->
+<!DOCTYPE html>
+
+<!-- Don’t use character references as much as possible
+If you write an HTML document with UTF-8, almost all characters (including Emoji) can be written directly. -->
+<!-- BAD -->
+<p><small>Copyright &copy; 2014 W3C<sup>&reg;</sup></small></p>
+<!-- GOOD -->
+<p><small>Copyright © 2014 W3C<sup>®</sup></small></p>
+
+<!-- Escape &, <,>, ", and ' with named character references
+  These characters should escape always for a bug-free HTML document. -->
 
 <!-- BAD -->
+<h1>The "&" character</h1>
 <!-- GOOD -->
-<!-- BAD -->
-<!-- GOOD -->
-<!-- BAD -->
-<!-- GOOD -->
+<h1>The &quot;&amp;&quot; character</h1>
 <!-- BAD -->
 <!-- GOOD -->
 <!-- BAD -->
