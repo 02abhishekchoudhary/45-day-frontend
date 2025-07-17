@@ -43,29 +43,66 @@ If you write an HTML document with UTF-8, almost all characters (including Emoji
 <h1>The "&" character</h1>
 <!-- GOOD -->
 <h1>The &quot;&amp;&quot; character</h1>
+
+<!-- Use numeric character references for control or invisible characters
+These characters are easily mistaken for another character. And also spec does not guarantee to define a human readable
+name for these characters. -->
 <!-- BAD -->
+<p>This book can read in 1 hour.</p>
 <!-- GOOD -->
+<p>This book can read in 1&#xA0;hour.</p>
+
+<!-- Put white spaces around comment contents
+Some characters cannot be used immediately after comment open or before comment close. -->
 <!-- BAD -->
+<!--This section is non-normative-->
 <!-- GOOD -->
+<!-- This section is non-normative -->
+
+<!-- Don’t omit closing tag
+I think you don’t understand a rule for omitting closing tag. -->
 <!-- BAD -->
-<!-- GOOD -->
-<!-- BAD -->
-<!-- GOOD -->
-<!-- BAD -->
-<!-- GOOD -->
-<!-- BAD -->
-<!-- GOOD -->
-<!-- BAD -->
-<!-- GOOD -->
-<!-- BAD -->
-<!-- GOOD -->
-<!-- BAD -->
-<!-- GOOD -->
-<!-- BAD -->
-<!-- GOOD -->
-<!-- BAD -->
-<!-- GOOD -->
-<!-- BAD -->
-<!-- GOOD -->
-<!-- BAD -->
-<!-- GOOD -->
+<html>
+
+<body>
+  ...
+  <!-- GOOD -->
+  <html>
+
+  <body>
+    ...
+  </body>
+
+  </html>
+
+  <!-- Don’t mix empty element format
+Consistency is a key for readability. -->
+  <!-- BAD -->
+  <img alt="HTML Best Practices" src="/img/logo.png">
+  <hr />
+  <!-- GOOD -->
+  <img alt="HTML Best Practices" src="/img/logo.png">
+  <hr>
+
+  <!-- Don’t put white spaces around tags and attribute values
+  There is no reason for doing this. -->
+  <!-- BAD -->
+  <h1 class=" title ">HTML Best Practices</h1>
+  <!-- GOOD -->
+  <h1 class=" title ">HTML Best Practices</h1>
+  <!-- BAD -->
+  <!-- GOOD -->
+  <!-- BAD -->
+  <!-- GOOD -->
+  <!-- BAD -->
+  <!-- GOOD -->
+  <!-- BAD -->
+  <!-- GOOD -->
+  <!-- BAD -->
+  <!-- GOOD -->
+  <!-- BAD -->
+  <!-- GOOD -->
+  <!-- BAD -->
+  <!-- GOOD -->
+  <!-- BAD -->
+  <!-- GOOD -->
