@@ -56,3 +56,58 @@ In the following example, the specificity is (1,0,0)
 #myID {
 color: red;
 }
+
+# Selectors:
+
+Common selectors:
+/_ Universal _/
+
+- {
+  box-sizing: border-box;
+  }
+
+/_ Type or Tag _/
+p {
+margin-block: 1.5rem;
+}
+
+/_ Classname _/
+.class {
+text-decoration: underline;
+}
+
+/_ ID _/
+#id {
+font-family: monospace;
+}
+
+/_ Relational _/
+li:has(a) {
+display: flex;
+}
+
+Common Combinators
+/_ Descendant _/
+header h1 {
+/_ Selects all Heading 1 elements in a Header element. _/
+}
+
+/_ Child _/
+header > h1 {
+/_ Selects all Heading 1 elements that are children of Header elements. _/
+}
+
+/_ General sibling _/
+h1 ~ p {
+/_ Selects a Paragraph as long as it follows a Heading 1. _/
+}
+
+/_ Adjacent sibling _/
+h1 + p {
+/_ Selects a Paragraph if it immediately follows a Heading 1 _/
+}
+
+/_ Chained _/
+h1, p {
+/_ Selects both elements. _/
+}
