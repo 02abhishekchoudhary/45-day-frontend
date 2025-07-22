@@ -111,3 +111,23 @@ h1 + p {
 h1, p {
 /_ Selects both elements. _/
 }
+
+# Pseudo-Classes and Pseudo-Elements
+
+A pseudo-class is a selector that selects elements that are in a specific state, for example, they are the first element of their type, or they are being hovered over by the mouse pointer. They tend to act as if you had applied a class to some part of your document, often helping you cut down on excess classes in your markup, and giving you more flexible, maintainable code.
+
+Pseudo-classes are keywords that start with a colon. For example, :hover is a pseudo-class.
+
+article p:first-child {
+font-size: 120%;
+font-weight: bold;
+}
+
+Pseudo-elements behave in a similar way. However, they act as if you had added a whole new HTML element into the markup, rather than applying a class to existing elements.
+
+Pseudo-elements start with a double colon ::. ::before is an example of a pseudo-element.
+
+article p::first-line {
+font-size: 120%;
+font-weight: bold;
+}
