@@ -131,3 +131,10 @@ article p::first-line {
 font-size: 120%;
 font-weight: bold;
 }
+
+# z-index
+
+The z-index property in CSS controls the vertical stacking order of elements that overlap. As in, which one appears as if it is physically closer to you. z-index only affects elements that have a position value other than static (the default).
+div {
+z-index: 1; /_ integer _/
+}
