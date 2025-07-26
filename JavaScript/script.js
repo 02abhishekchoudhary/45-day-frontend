@@ -26,3 +26,7 @@
 //   var x = 100;
 //   console.log(x);
 // }
+
+/* Undefined vs not defined */
+// var a = 7; // undefined
+// console.log(x); // not defined

@@ -38,3 +38,9 @@
 - Also created window object & this keyword.
 - At global scope this refer to object. (this === window is true)
 - Everything which is not inside the function is in global space
+
+# Undefined vs not defined
+
+- If we allocate memory to any variable then js will store undefined during memory allocation phase.
+- If we not allocate memory then it will throw an error of not defined.
+- JS IS LOOSELY TYPE LANGUAGE. WHICH MEANS ITS NOT ATTACHES VARIABLE TO ANY DATA TYPE.
