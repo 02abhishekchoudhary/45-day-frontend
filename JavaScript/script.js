@@ -1,9 +1,26 @@
-getName();
+/* HOISTING */
+
+// getName();
+// console.log(x);
+// console.log(getName);
+
+// var x = 7;
+
+// function getName() {
+//   console.log("Hello World");
+// }
+
+var x = 1;
+a();
+b();
 console.log(x);
-console.log(getName);
 
-var x = 7;
+function a() {
+  var x = 10;
+  console.log(x);
+}
 
-function getName() {
-  console.log("Hello World");
+function b() {
+  var x = 100;
+  console.log(x);
 }

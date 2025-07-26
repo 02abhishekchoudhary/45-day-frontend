@@ -22,3 +22,12 @@
 - UNDEFINED: Memory allocated for variable but not initialized.
 
 - In case of arrow function hoisting will not take place. Its behave just like a variable.
+
+# How functions works in JS
+
+- Global ececution context is created.
+- Memory phase
+- Code phase
+- function pushed into call stack
+- function poped out from call stack
+- At the end GEC and call stack deleted
