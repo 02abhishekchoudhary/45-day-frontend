@@ -31,3 +31,10 @@
 - function pushed into call stack
 - function poped out from call stack
 - At the end GEC and call stack deleted
+
+# Shortest JS Program, Window & this keyword
+
+- In an empty JS file JS engime will create GEC & also sets up memory space.
+- Also created window object & this keyword.
+- At global scope this refer to object. (this === window is true)
+- Everything which is not inside the function is in global space
