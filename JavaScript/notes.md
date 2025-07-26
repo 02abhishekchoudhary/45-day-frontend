@@ -12,3 +12,13 @@
 - 2nd phase:
   ![alt text](image-2.png)
 - Call stack maintains the order of execution of execution contexts
+
+# Hoisting in JavaScript
+
+- Hoisting is a phenomena in Javascript by which we can access the variables and functions even before initialized it and we have put some value in it. We can access it without any error.
+- In case of proper function declaration it will store whole function code.
+
+- NOT DEFINED: If we not allocate memory for variable.
+- UNDEFINED: Memory allocated for variable but not initialized.
+
+- In case of arrow function hoisting will not take place. Its behave just like a variable.
