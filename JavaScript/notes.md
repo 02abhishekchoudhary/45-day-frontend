@@ -44,3 +44,11 @@
 - If we allocate memory to any variable then js will store undefined during memory allocation phase.
 - If we not allocate memory then it will throw an error of not defined.
 - JS IS LOOSELY TYPE LANGUAGE. WHICH MEANS ITS NOT ATTACHES VARIABLE TO ANY DATA TYPE.
+
+# Scope chain, Scope & Lexical environment:
+
+- Scope in JS directly releated to lexical environment.
+- Scope is where we can access specific variable and function in our code.
+- Whenever EC is created a lexical enviornment is also created. Lexical enviornment is local memory along with its lexical enviornment of its parent.
+- At global level lexical enviornment its points to NULL.
+- Scope chain is whole chain of lexical enviornment.
