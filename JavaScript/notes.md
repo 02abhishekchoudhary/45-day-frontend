@@ -60,3 +60,30 @@
 - TDZ is the time since let and const variable is hoisted and till it is initialized some value.
 - Whenever we try to access let and const variable in TDZ, it will throw an error of RefeerenceError.
 - We can re initialized let but not const variable also if const is not initialized it will throw an error.
+
+# Block scope, Shadowing in JS
+
+- Block is defined by {}. Block is also known as compound statement. Block used for bundle multiple statements together in a block to use where JS needs one statement.
+- Shadowing in JS:
+  var a = 10;
+  {
+  var a = 100;
+  console.log(a)
+  }
+  console.log(a)
+- Shadowing will not happen in case of let & const.
+- var is function scope.
+
+- Illegal shadowing:
+  let a = 20;
+  {
+  var a = 20;
+  }
+- Because var a is crossing its boundary above. It will throw an error.
+
+var a = 20;
+{
+let a = 20;
+}
+
+- It is legal shadowing because let a is here block scope and not crossing its block. Same happess with const variable.
