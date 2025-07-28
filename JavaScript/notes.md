@@ -87,3 +87,28 @@ let a = 20;
 }
 
 - It is legal shadowing because let a is here block scope and not crossing its block. Same happess with const variable.
+
+# Closures:
+
+- A function bind together with its lexical enviornment.
+  function x() {
+  var a = 7;
+  function y() {
+  console.log(a);
+  }
+  return y;
+  }
+
+var z = x(); // Here z have reference of a because of fn y lexical env.
+console.log(z);
+z();
+
+- Uses:
+  - Module design pattern
+  - Currying
+  - Functions like once
+  - memoize
+  - maintaining state in async world
+  - setTimeouts
+  - Iterators
+  - and many more....
