@@ -32,12 +32,12 @@
 // console.log(x); // not defined
 
 /* Scope chain, Scope & Lexical environment */
-function a() {
-  var b = 10;
-  c();
-  function c() {
-    console.log(b);
-  }
-}
+// function a() {
+//   var b = 10;
+//   c();
+//   function c() {
+//     console.log(b);
+//   }
+// }
 
-a();
+// a();

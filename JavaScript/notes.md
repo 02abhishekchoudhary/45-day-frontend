@@ -52,3 +52,11 @@
 - Whenever EC is created a lexical enviornment is also created. Lexical enviornment is local memory along with its lexical enviornment of its parent.
 - At global level lexical enviornment its points to NULL.
 - Scope chain is whole chain of lexical enviornment.
+
+# let & Const, Temporal dead zone:
+
+- let & const declarations are hoisted.
+- let & const are in different memory space than global space.
+- TDZ is the time since let and const variable is hoisted and till it is initialized some value.
+- Whenever we try to access let and const variable in TDZ, it will throw an error of RefeerenceError.
+- We can re initialized let but not const variable also if const is not initialized it will throw an error.
