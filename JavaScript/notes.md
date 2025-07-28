@@ -112,3 +112,41 @@ z();
   - setTimeouts
   - Iterators
   - and many more....
+
+# setTimeout + closures interview questions:
+
+function x() {
+for (var i = 0; i <= 5; i++) {
+setTimeout(() => {
+console.log(i);
+}, i \* 1000);
+}
+}
+x();
+
+- will print 6 6 6 6 6 because of closure and var. setTimeout have reference of a and when timer will end value of a became 6.
+
+-------- Solution
+function x() {
+for (let i = 1; i <= 5; i++) {
+setTimeout(() => {
+console.log(i);
+}, i \* 1000);
+}
+}
+x();
+
+- will print 1 2 3 4 5 because here let will create new block scope of i in every iteration.
+
+----- Solution with var
+function x() {
+for (var i = 1; i <= 5; i++) {
+function close(i) {
+setTimeout(() => {
+console.log(i);
+}, i \* 1000);
+}
+close(i)
+}
+}
+x();
