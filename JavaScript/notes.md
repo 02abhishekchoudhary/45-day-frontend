@@ -153,3 +153,37 @@ x();
 
 - Disadvantage of closures:
   - over consumption of memory.
+
+# First class functions ft. Anonymous functions:
+
+- Functions are treated as value.
+
+---- function statement aka declaration
+function a(){
+console.log("a called");
+}
+
+---- function expression
+var b = function(){
+console.log("b called");
+}
+
+---- Anonymous Function
+function(){}
+
+---- Named function expression
+var c = function xyz(){
+console.log("b called");
+console.log(xyz);
+}
+c();
+xyz(); // will throw an error
+
+---- First class function & First class citizens
+
+- The ability of function to use as a value and passed in another function as argument and return out from a function is called first class function.
+
+var d = function(param1){
+return function xyz(){}
+}
+console.log(b(xyz))
