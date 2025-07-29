@@ -150,3 +150,6 @@ close(i)
 }
 }
 x();
+
+- Disadvantage of closures:
+  - over consumption of memory.
