@@ -54,3 +54,12 @@
 // var z = x();
 // console.log(z);
 // z();
+
+/* closure demo with event listeners */
+function attachEventListeners() {
+  let count = 0;
+  document.getElementById("clickMe").addEventListener("click", function () {
+    console.log("Button clicked", ++count);
+  });
+}
+attachEventListeners();

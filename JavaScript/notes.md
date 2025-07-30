@@ -187,3 +187,19 @@ var d = function(param1){
 return function xyz(){}
 }
 console.log(b(xyz))
+
+# Callback functions in JS ft. event listeners
+
+---- Callbacck function:
+setTimeout(function(){
+console.log("Timer");
+},5000);
+
+function x(y){
+console.log("x");
+y();
+}
+
+x(function y(){
+console.log("y");
+})
