@@ -203,3 +203,24 @@ y();
 x(function y(){
 console.log("y");
 })
+
+# Asynchronous Javascript & Event loop:
+
+---- Web API's
+
+- SetTimeout()
+- DOM APIs
+- fetch()
+- localStorage
+- console
+- location
+
+- Callback function which have timer are going through callback queue with the help of event loop to call stack.
+
+- Event loop works like a gatekeeper b/w callback queue and call stack. It will check if there is anything in callback queue then it will send it in call stack for executiion.
+
+- fetch : microtask queue has higher priority then callback queue. callbak function in case of promises & mutation observor goes through microtask queue.
+
+- All everything else goes through callback queue.
+
+- Starvation of functions in callback queue: if microtask have multiple task and those task have some task also then it will lead to starvation for callback queue functions.
