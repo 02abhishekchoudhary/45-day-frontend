@@ -236,3 +236,7 @@ console.log("y");
 - JS has JIT (Just in time compilation)
 - Mark & sweep algorithm used for garbage collector.
   ![V8-Engine](image-3.png)
+
+# Trust issues with setTimeout()
+
+- If setTimeout is set for 5000ms and there after many lines of code and those code will take 10s. So, setTimeout will not executed after 5000ms it will only goes to call stack from callback queue once other codes executed.
