@@ -224,3 +224,15 @@ console.log("y");
 - All everything else goes through callback queue.
 
 - Starvation of functions in callback queue: if microtask have multiple task and those task have some task also then it will lead to starvation for callback queue functions.
+
+# JS Engine, Google V8 archietecture:
+
+---- Code -> Parsing -> Compilation -> Execution
+---- Parsing: - code will broken into token - Syntax parser convert in AST - Abstract syntax tree.
+
+---- Compilation:
+
+- compilation and execution go hand by hand.
+- JS has JIT (Just in time compilation)
+- Mark & sweep algorithm used for garbage collector.
+  ![V8-Engine](image-3.png)
