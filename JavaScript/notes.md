@@ -240,3 +240,7 @@ console.log("y");
 # Trust issues with setTimeout()
 
 - If setTimeout is set for 5000ms and there after many lines of code and those code will take 10s. So, setTimeout will not executed after 5000ms it will only goes to call stack from callback queue once other codes executed.
+
+# Highr order function ft. functional programming
+
+- Any function takes another function as arguments and functions return another functions are highr order function.
