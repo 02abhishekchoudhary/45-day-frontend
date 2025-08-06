@@ -244,3 +244,7 @@ console.log("y");
 # Highr order function ft. functional programming
 
 - Any function takes another function as arguments and functions return another functions are highr order function.
+
+# MAP, FILTER & REDUCE:
+
+- Map, filter and reduce are higher order functions.
