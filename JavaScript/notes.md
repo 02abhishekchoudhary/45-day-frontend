@@ -248,3 +248,6 @@ console.log("y");
 # MAP, FILTER & REDUCE:
 
 - Map, filter and reduce are higher order functions.
+- Map function is used for doing some operaation on an array.
+- Filter function is used for doing filtering
+- Reduce function is used for doing somee operation and comes up with single value. Reduce takes two parameters accumulator and current.
