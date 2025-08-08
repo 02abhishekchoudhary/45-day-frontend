@@ -251,3 +251,9 @@ console.log("y");
 - Map function is used for doing some operaation on an array.
 - Filter function is used for doing filtering
 - Reduce function is used for doing somee operation and comes up with single value. Reduce takes two parameters accumulator and current.
+
+# Callback hell:
+
+- Used for async JS
+- one callback inside another callback leads to callback hell. Code is growing horizontally and also know as pyramid of doom.
+- Inversion of control.
